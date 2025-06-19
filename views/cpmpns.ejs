@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> <%= title %> </title>
+    <link rel="stylesheet" href="/styles/general.css">
+    <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/CPM2.css">
+    <script src="/scripts/nav.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container grid-flow">
+        <div class="description grid-flow">
+            <div>
+                <h1 class="title">CPM</h1>
+                <div class="line short"></div>
+            </div>
+            <p class="why">
+            Join us in shaping the future of governance through dynamic discussions and innovative solutions.
+            Together, we can turn ideas into impactful policies that drive positive change in society.
+            </p>
+            <p><a href="/CPM" class="back">Go Back</a></p>        
+        </div>
+
+        <div class="user-interface grid-flow">
+            <div>
+                <h1 class="title">Propose a new service</h1>
+                <div class="line long"></div>
+            </div>
+            <form action="/CPM/cpmpns" method="post" class="grid-flow">
+
+                <textarea name="improvement" style="height: 10rem;" placeholder="Enter your suggestion" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

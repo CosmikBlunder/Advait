@@ -1,0 +1,26 @@
+<div class="highlights grid-flow">
+    <% previews.forEach(service => { %>
+    <div class="highlight flex-flow" onclick="window.location.href= '<%=service.url%>' ">
+        <div class="highlight-img">
+            <% if (service.keyword == 'Student' || service.keyword == 'Graduate' || service.keyword == '10th' || service.keyword == '12th' || service.keyword == 'Post Graduate' || service.keyword == 'Doctorate') { %>
+                <img src="/images/student2.jpg" alt="" srcset="">
+            <% } else if (service.keyword == 'Employee' || service.keyword == 'Businessman' || service.keyword == 'Self Employed') { %>
+                <img src="/images/work.jpg" alt="" srcset="">
+                <% } else if (service.keyword == 'Housewife' || service.keyword == 'Retired') {%>
+                    <img src="/images/home.jpg" alt="" srcset="">
+                <% } else { %>
+                    <img src="/images/india.jpg" alt="not found" srcset="">
+            <% } %>
+
+        </div>
+        <div class="highlight-text">
+            <h2> <%= service.title %> </h2>
+            <p class="highlight-text-snip">
+                <%= service.keyword %>
+            </p>
+            <p class="highlight-text-desc"> <%= service.snippet %> </p>
+        </div>
+    </div>
+    <% }); %>
+
+</div>

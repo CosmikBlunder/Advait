@@ -1,0 +1,137 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: var(--font-family);
+    font-weight: var(--fw-400);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--primary-color);
+}
+
+.line{
+    height: 3px;
+    background: var(--accent-color);
+    margin: 3px 0;
+}
+
+.long{
+    width: 6rem;
+}
+
+.short {
+    width: 3rem;
+}
+
+.title{
+    font-size: var(--fs-600);
+    font-weight: var(--fw-600);
+    /* border:1px solid red; */
+}
+
+.container{
+    width: 100%;
+    max-width: 1000px;
+    /* padding: var(--section-padding-lr) var(--section-padding-md); */
+    background: var(--bg-color);
+    border-radius: 5px;
+    box-shadow: var(--xxl-shadow);
+    grid-template-columns: .8fr 1fr;
+    border-radius: 1rem;
+
+}
+
+.description, .user-interface{
+    padding: var(--section-padding-lr) var(--section-padding-md);
+    row-gap: 1.5rem;
+    align-content: center;
+}
+
+.description{
+    background-color: var(--text-color);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    color:var(--bg-color)
+}
+
+.why{
+    font-weight: var(--fw-300);
+}
+
+.login, .signup{
+    color:var(--accent-color)
+}
+
+.user-interface{
+    justify-items: center;
+}
+
+.user-interface form{
+    justify-items: center;
+    width:100%;
+    row-gap: 1.5rem;
+}
+
+.user-interface select{
+    justify-self: stretch;
+    padding: 0.5rem;
+    border:none;
+    border-bottom: 1px solid rgba(var(--text-color-rgb), 0.3);;
+    background-color:var(--bg-color);
+}
+
+.user-interface select:focus{
+    outline: none;
+    border-bottom: 1px solid var(--text-color);
+}
+
+
+
+.user-interface form input{
+    background: none;
+    border:none;
+    border-bottom: 1px solid rgba(var(--text-color-rgb), 0.3);
+    justify-self: stretch;
+    padding: 0.5rem;
+}
+
+.user-interface form input:focus{
+    outline: none;
+    border-bottom: 1px solid var(--text-color);
+}
+
+.user-interface form input::placeholder{
+    color: rgba(var(--text-color-rgb), 0.5);
+}
+
+.user-interface form button{
+    background-color: var(--bg-color);
+    padding: .5rem 1.25rem;
+    border:2px solid var(--text-color);
+    border-radius: 1rem;
+    font-size: var(--fs-50);
+    font-weight: var(--fw-200);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.user-interface form button:hover{
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.popup{
+    color: var(--accent-color);
+    font-size: var(--fs-50);
+    font-weight: var(--fw-500);
+    text-shadow: var(--s-text-shadow);
+}
+
+

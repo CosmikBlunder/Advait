@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> <%= title %> </title>
+    <link rel="stylesheet" type="text/css" href="/styles/NEKI.css">
+    <link rel="stylesheet" href="/styles/general.css">
+    <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/icons.css">
+    <script src="/scripts/nav.js"></script>
+</head>
+<body>
+    <%- include('partials/nav') %>
+    <header class="grid-flow">
+        <div class="user_name">
+            <h1>Samay Jain</h1>
+        </div>
+        <div class="user-points">
+            <p>NEKI :  </p><span class="points"> <%= points %> </span>
+        </div>
+    </header>
+
+    <main class="grid-flow">
+        <div class="box cta">
+            <div>
+            <h1>NEKI</h1>
+            <p style="font-weight: var(--fw-500); font-size: var(--fs-300);">Noble Engagement of Kinship Incentives</p>
+            <p>NEKI is a platform where you can contribute to the society by doing small tasks and earn points.</p>
+            <button class="login-btn" onclick="neki()" id="contribute">Contribute Now</button>
+            </div>
+        </div>
+        <div class="neki-pallete">
+            <div >
+                <h2>achievements</h2>
+            <div class="achievements box">
+            <div class="icons">
+                <i class="fas fa-chess-pawn <%= points >= 300 ? 'full-opacity' : 'faded' %>" title="Unlock at 300 points"></i>
+                <i class="fas fa-chess-knight <%= points >= 800 ? 'full-opacity' : 'faded' %>" title="Unlock at 800 points"></i>
+                <i class="fas fa-chess-bishop <%= points >= 1000 ? 'full-opacity' : 'faded' %>" title="Unlock at 1000 points"></i>
+                <i class="fas fa-chess-rook <%= points >= 1500 ? 'full-opacity' : 'faded' %>" title="Unlock at 1500 points"></i>
+                <i class="fas fa-chess-queen <%= points >= 2000 ? 'full-opacity' : 'faded' %>" title="Unlock at 2000 points"></i>
+                <i class="fas fa-chess-king <%= points >= 5000 ? 'full-opacity' : 'faded' %>" title="Unlock at 5000 points"></i>
+            </div>
+            </div>
+
+            </div>
+            <div class="flex-flow" style="flex-direction: column;">
+                <h2>Leaderboard</h2>
+                <div class="leaderboard box">
+                    
+                    <ul class="leaderboard-list">
+                        <% leaderboard.forEach(user => { %>
+                          <li class="leaderboard-item">
+                            <p><%= user.name %></p>
+                            <span><%= user.points %></span>
+                          </li>
+                        <% }); %>
+                    </ul>                      
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="contribution-section"  id="content">
+        <div class="contribution-details">
+            <h2>Contribute Now!</h2>
+        </div>
+
+        <form action="/NEKI" method="post">
+            <input type="text" name="title" placeholder="Enter title" required>
+            <textarea name="content" placeholder="Enter content" required></textarea>
+            <input type="file" id="fileInput" class="input-file">
+            <label for="fileInput" class="custom-file-upload">Choose File</label>
+            <span class="file-name"></span>
+
+            <button class="login-btn">Submit</button>
+        </form>
+
+        <p class="popup"> <%= msg %></p>
+    </section>
+        
+
+
+    <footer class="grid-flow">
+        <%- include('partials/footer') %>
+    </footer>
+    
+
+
+</body>
+</html>

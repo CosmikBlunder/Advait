@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> <%= title %> </title>
+    <link rel="stylesheet" type="text/css" href="/styles/landing.css">
+    <link rel="stylesheet" href="/styles/general.css">
+    <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/icons.css">
+</head>
+<body>
+    <nav class="flex-flow">
+        <div class="advait">
+            <a href="#">Advait</a>
+        </div>
+        <ul class="nav-links flex-flow">
+            <li><a href="/services">Services</a></li>
+            <li><a href="https://rtionline.gov.in/">RTI</a></li>
+            <li><a href="https://knowindia.gov.in/my-india-my-pride/">BharatVarsh</a></li>
+        </ul>
+        <!-- <div class="hamburger-menu">
+            <i class="fa-solid fa-bars fa-xl"></i>
+        </div> -->
+
+        <button class="login-btn" onclick="window.location.href='/login'">Log in</button>
+    </nav>
+
+    <main class="grid-flow">
+        <div class="cta">
+            <h1>One nation One platform</h1>
+            <button onclick="window.location.href='/signup'">Sign up</button>
+        </div>
+        <div class="landing-img">
+            <div class="side-img">
+                <img src="/images/_.webp" alt="not found" srcset="">
+            </div>
+        </div>
+    </main>
+
+    <footer class="grid-flow">
+        <%- include('partials/footer') %>
+    </footer>
+    
+
+
+</body>
+</html>

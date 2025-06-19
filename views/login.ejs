@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> <%= title %> </title>
+    <link rel="stylesheet" href="/styles/general.css">
+    <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/authentication.css">
+    <link rel="stylesheet" href="/styles/icons.css">
+</head>
+<body>
+    <div class="container grid-flow">
+        <div class="description grid-flow">
+            <div>
+                <h1 class="title">Advait</h1>
+                <div class="line long"></div>
+            </div>
+            <p class="why">
+                Login to access your account and enjoy the benefits of our services.
+            </p>
+            <p>New user? <a href="/signup" class="signup">Sign Up</a></p>
+        </div>
+
+        <div class="user-interface grid-flow">
+            <div>
+                <h1 class="title">Log In</h1>
+                <div class="line short"></div>
+            </div>
+            <form action="/login" method="post" class="grid-flow">
+                <input type="email" name="email" required placeholder="Enter your email address">
+                <input type="password" name="password" placeholder="Enter password" required>
+
+                <button type="submit">Log In</button>
+            </form>
+
+            <p class="popup"> <%= msg %> </p>
+
+        </div>
+    </div>
+</body>
+</html>

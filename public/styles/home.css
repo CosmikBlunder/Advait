@@ -1,0 +1,118 @@
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+   
+}
+
+
+.hero{
+    grid-template-columns: 4fr 6fr;
+    height: 100vh;
+    box-shadow: var(--s-shadow);
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text{
+    place-content: center;
+    padding: var(--section-padding-md);
+    &>h1{
+        font-size: var(--fs-700);
+        font-weight: var(--fw-600);
+        margin-bottom: var(--padding-3);
+    
+    }
+    /* background-color: var(--primary-color); */
+
+    &>p{
+        font-size: var(--fs-100);
+        font-weight: var(--fw-400);
+    
+    }
+
+    box-shadow: var(--m-shadow);
+}
+
+.features{
+    flex-direction: row;
+    gap: var(--section-padding-sm);
+    align-items: center;
+    min-width: 0;
+    overflow-x: scroll;
+    padding: 0 var(--section-padding-sm);
+}
+
+.features::-webkit-scrollbar{
+    display: none;
+}
+
+.feature{
+    /* border:1px solid green; */
+    width: 304px;
+    height: 400px;
+    flex-shrink: 0;
+    cursor: pointer;
+
+    &>h2{
+        font-size: var(--fs-300);
+        font-weight: var(--fw-500);
+        margin-top: var(--padding-5);
+        margin-bottom: var(--padding-2);
+        text-shadow: var(--m-text-shadow);
+    }
+    &>.sub-heading{
+        font-size: var(--fs-50);
+        font-weight: var(--fw-400);
+        margin-bottom: var(--padding-3);
+        color:var(--secondary-color);
+        text-shadow: var(--s-text-shadow);
+    }
+
+}
+
+.feature-img{
+    width:100%;
+    height: 304px;
+
+    &>img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: var(--border-radius-3);
+    }
+    box-shadow: var(--m-shadow);
+}
+
+
+/* article */
+
+article{
+    padding: var(--padding-11) var(--padding-11);
+    /* border: 1px solid red; */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+article>h1{
+    font-size: var(--fs-400);
+    font-weight: var(--fw-600);
+    /* color: var(--bg-color); */
+    text-transform: uppercase;
+    margin-bottom: var(--padding-3);
+}
+
+article>p{
+    font-size: var(--fs-100);
+    font-weight: var(--fw-400);
+    /* color: var(--text-color); */
+    text-align: justify;
+    margin-bottom: var(--padding-11);
+}
+
+
+

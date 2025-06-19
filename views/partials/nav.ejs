@@ -1,0 +1,39 @@
+<nav class="flex-flow">
+    <div class="advait">
+        <a href="/home">Advait</a>
+    </div>
+    <ul class="flex-flow nav-links">
+        <li><a href="/services">Services</a></li>
+        <li><a href="https://rtionline.gov.in/">RTI</a></li>
+        <li><a href="https://knowindia.gov.in/my-india-my-pride/">BharatVarsh</a></li>
+    </ul>
+    <div class="hamburger-menu" onclick="navopen()">
+        <i class="fas fa-bars fa"></i>
+    </div>
+
+    <div class="sidebar">
+        <div class="user-stuff">
+            <div class="user-img">
+                <!-- <img src="/images/0684456b-aa2b-4631-86f7-93ceaf33303c.webp" alt="not found" srcset=""> -->
+                <i class="fas fa-user-tie"></i>
+            </div>
+            <div class="user-name">
+                <p>
+                    <%= name %>
+                </p>
+            </div>
+        </div>
+
+        <ul class="other-options">
+            <li><a href="/home"> Home </a></li>
+            <li><a href="/NEKI"> NEKI </a></li>
+            <li><a href="/CPM"> Collaborative Policy Making </a></li>
+        </ul>
+
+        <form action="/logout" method="post">
+            <button>Log out</button>
+        </form>
+        
+    </div>
+    
+</nav>

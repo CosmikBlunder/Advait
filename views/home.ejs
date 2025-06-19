@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> <%= title %> </title>
+    <link rel="stylesheet" href="/styles/general.css">
+    <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/service-pallete.css">
+    <link rel="stylesheet" href="/styles/icons.css">
+    <script src="/scripts/nav.js"></script>
+</head>
+<body>
+    <%- include('partials/nav') %>
+
+    <main>
+       
+        <section class="hero grid-flow">
+            <div class="hero-text grid-flow">
+                <h1>Advait</h1>
+                <p>Advait is an envisioned website aiming to revolutionize the relationship between citizens and their government through a multifaceted approach. </p>
+            </div>
+
+            <div class="features flex-flow">
+                <div class="feature" onclick="window.location.href='/NEKI'">
+                    <div class="feature-img">
+                        <img src="/images/HD wallpaper_ india, national, emblem, statue, pillar, sculpture, lion - Feline.webp" alt="">
+                    </div>
+                    <h2>NEKI</h2>
+                    <p class="sub-heading">Noble Engagement Kinship Incentivized</p>
+                </div>
+                <div class="feature"  onclick="window.location.href='/CPM'">
+                    <div class="feature-img">
+                        <img src="/images/Free Photo _ Vintage retro light in dark bed room.webp" alt="not found">
+                    </div>
+                    <h2>CPM</h2>
+                    <p class="sub-heading">Collaborative Policy Making</p>
+                </div>
+                <div class="feature"  onclick="my404()">
+                    <div class="feature-img">
+                        <img src="/images/Question mark scribble (1).webp" alt="not found">
+                    </div>
+                    <h2>Coming soon...</h2>
+                </div>
+            </div>
+
+        </section>
+
+        <article>
+            <h1>Highlights</h1>
+            <p class="description"> Services for you based on your KYC and previous activity.</p>
+
+            <%- include('partials/service-pallete') %>
+
+        </article>
+    </main>
+
+    <footer class="grid-flow">
+        <%- include('partials/footer') %>
+    </footer>
+
+<script src="scripts/main.js">
+
+</script>
+
+</body>
+</html>

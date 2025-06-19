@@ -1,0 +1,144 @@
+ :root{
+    /* colors */
+    --primary-color: rgb(201, 214, 223);
+    --secondary-color: rgb(82, 97, 107);
+    --text-color:rgb(30, 32, 34);
+    --bg-color: rgb(240, 245, 249);
+    --accent-color: rgb(235, 100, 64);
+
+    --primary-color-rgb: 201, 214, 223;
+    --secondary-color-rgb: 82, 97, 107;
+    --text-color-rgb: 30, 32, 34;
+    --bg-color-rgb: 240, 245, 249;
+    --accent-color-rgb: 235, 100, 64;
+
+    /* gradient */
+
+    --primary-gradient: linear-gradient(-45deg, var(--primary-color), rgba(var(--primary-color-rgb), 0.2)) ; 
+
+    --secondary-gradient: linear-gradient(-45deg, var(--secondary-color), rgba(var(--secondary-color-rgb), 0.6)) ;
+
+
+    /* font */
+    --font-family: 'General Sans';
+
+    --fs-700: 2.986rem;
+    --fs-600: 2.488rem;
+    --fs-500: 2.074rem;
+    --fs-400: 1.728rem;
+    --fs-300: 1.44rem;
+    --fs-200: 1.2rem;
+    --fs-100: 1rem;
+    --fs-50: 0.833rem;
+    --fs-45: 0.694rem;
+
+    --fw-700: 700;
+    --fw-600: 600;
+    --fw-500: 500;
+    --fw-400: 400;
+    --fw-300: 300;
+    --fw-200: 200;
+
+
+
+    /* paddings */
+
+    --padding-1:4px;
+    --padding-2:6px;
+    --padding-3:8px;
+    --padding-4:12px;
+    --padding-5:16px;
+    --padding-6:20px;
+    --padding-7:24px;
+    --padding-8:32px;
+    --padding-9:40px;
+    --padding-10:48px;
+    --padding-11:56px;
+    --padding-12:64px;
+    --padding-13:72px;
+    --padding-14:80px;
+    --padding-15:88px;
+    --padding-16:96px;
+
+    --section-padding-lr: 112px;
+    --section-padding-md: 80px;
+    --section-padding-sm: 40px;
+    --section-padding-xs: 24px;
+
+
+    /* box-shadow */
+
+    --xxl-shadow: 0px 32px 64px -12px rgba(0, 0, 0, 0.14);
+    --xl-shadow: 0px 24px 48px -12px rgba(0, 0, 0, 0.18);
+    --l-shadow: 0px 20px 24px -4px rgba(0, 0, 0, 0.08), 0px 8px 8px -4px rgba(0, 0, 0, 0.03);
+    --m-shadow: 0px 12px 16px -4px rgba(0, 0, 0, 0.08), 0px 4px 6px -2px rgba(0, 0, 0, 0.03);
+    --s-shadow: 0px 4px 8px -2px rgba(0, 0, 0, 0.10), 0px 2px 4px -2px rgba(0, 0, 0, 0.06);
+    --xs-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+    --xxs-shadow:0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+
+    /* text-shadow */
+
+    --s-text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    --m-text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    --l-text-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+
+
+
+    /* border-radius */
+    --border-radius-1: 0.2rem;
+    --border-radius-2: 0.4rem;
+    --border-radius-3: 0.6rem;
+    --border-radius-4: 0.8rem;
+    --border-radius-5: 1rem;
+}
+
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font:inherit;
+}
+
+.flex-flow{
+    display: flex;
+}
+
+.grid-flow{
+    display:grid;
+}
+
+.login-btn{
+    background-color: var(--bg-color);
+    padding: .5rem 1.25rem;
+    border:2px solid var(--text-color);
+    border-radius: 1rem;
+    font-size: var(--fs-50);
+    font-weight: var(--fw-200);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.15s, color 0.15s;
+    
+    &:hover{
+        background-color: var(--text-color);
+        color: var(--bg-color);
+    }
+}

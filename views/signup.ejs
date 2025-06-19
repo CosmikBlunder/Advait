@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> <%= title %> </title>
+    <link rel="stylesheet" href="/styles/general.css">
+    <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/authentication.css">
+    <link rel="stylesheet" href="/styles/icons.css">
+</head>
+<body>
+    <div class="container grid-flow">
+        <div class="description grid-flow">
+            <div>
+                <h1 class="title">Advait</h1>
+                <div class="line long"></div>
+            </div>
+            <p class="why">
+                Sign up to get access to all the features of Advait. 
+                This involves a two step secured process.
+            </p>
+            <p>Existing user? <a href="/login" class="login">Log In</a></p>
+        </div>
+
+        <div class="user-interface grid-flow">
+            <div>
+                <h1 class="title">Sign Up</h1>
+                <div class="line short"></div>
+            </div>
+            <form action="/signup" method="post" class="grid-flow">
+                <input type="text" name="name" placeholder="Enter your Name" required>
+                <input type="email" name="email" required placeholder="Enter your email address">
+                <input type="password" name="password" placeholder="Enter password" required>
+
+
+                <button type="submit">Proceed to KYC</button>
+            </form>
+
+            <p class="popup"><%= msg %></p>
+        </div>
+    </div>
+</body>
+</html>

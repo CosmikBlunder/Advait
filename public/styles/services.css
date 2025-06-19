@@ -1,0 +1,29 @@
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+main{
+    padding: var(--section-padding-sm);
+
+}
+
+h1{
+    font-size: var(--fs-600);
+    font-weight: var(--fw-600);
+    margin-bottom: var(--padding-8);
+    margin-top: var(--padding-12);
+}
+
+
+h3{
+    font-size: var(--fs-100);
+    font-weight: var(--fw-500);
+    margin: var(--padding-4) 0;
+    display: inline-block;
+}
+
+h3:hover{
+    color: var(--accent-color);
+}

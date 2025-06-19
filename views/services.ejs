@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> <%= title %> </title>
+    <link rel="stylesheet" href="/styles/general.css">
+    <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/services.css">
+    <link rel="stylesheet" href="/styles/service-pallete.css">
+    <link rel="stylesheet" href="/styles/icons.css">
+    <script src="/scripts/nav.js"></script>
+</head>
+<body>
+    <%- include('partials/nav') %>
+
+        <main>
+            <h1>Services</h1>
+
+            <%- include('partials/service-pallete') %>
+            
+
+            <h3><a href="https://services.india.gov.in/">View more</a></h3>
+        </main>
+
+        <footer class="grid-flow">
+            <%- include('partials/footer') %>
+        </footer>
+    
+</body>
+</html>

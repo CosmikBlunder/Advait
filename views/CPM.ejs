@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> <%= title %> </title>
+    <link rel="stylesheet" type="text/css" href="/styles/CPM.css">
+    <link rel="stylesheet" href="/styles/general.css">
+    <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/icons.css">
+    <script src="/scripts/nav.js"></script>
+</head>
+<body>
+    <%- include('partials/nav') %>
+
+    <main class="grid-flow">
+        <div class="cta">
+            <h1>Collaborative Policy Making</h1>
+            <p>The hub of Innovation in Policy Making!</p>
+        </div>
+        <p class="cpm-desc">
+            At ADVAIT, we revolutionize policy making by embracing collaboration and creativity.
+            Join us in shaping the future of governance through dynamic discussions and innovative solutions.
+            Together, we can turn ideas into impactful policies that drive positive change in society.
+        </p>
+    </main>
+
+    <section class="grid-flow CPM-palette">
+
+        <div class="card" onclick="window.location.href = '/CPM/cpmimp'">
+            <div class="card-img">
+                <img src="/images/CPM2.webp" alt="not found" srcset="" >
+            </div>
+            <div class="card-content">
+                <h2>Suggest Improvements</h2>
+                <p> Share your innovative ideas and suggestions to enhance our existing services and policies for a brighter future.</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='/CPM/cpmpns'">
+            <div class="card-img">
+                <img src="/images/CPM1.webp" alt="not found" srcset="" style="object-position: right;">
+            </div>
+            <div class="card-content">
+                <h2>Propose a new Policy</h2>
+                <p>Pitch your groundbreaking ideas for new services with detailed descriptions to revolutionize our offerings and make a difference.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FAQ section -->
+    <section class="faq">
+        <h2>FAQs</h2>
+        <div class="faq-content">
+            <div class="faq-question">
+                <h3>How can I contribute to policy making at ADVAIT?</h3>
+                <p> You can contribute by sharing your ideas and suggestions for improving our existing services or proposing new services. </p>
+            </div>
+            <div class="faq-question">
+                <h3>How are the ideas evaluated?</h3>
+                <p> The ideas are evaluated based on their feasibility, impact, and alignment with our vision of innovation in policy making. </p>
+            </div>
+            <div class="faq-question">
+                <h3>What happens after I submit my idea?</h3>
+                <p> After you submit your idea, our team will review it and assess its potential for implementation. You will be notified of the outcome. </p>
+            </div>
+            <div class="faq-question">
+                <h3>Can I collaborate with other contributors?</h3>
+                <p> Yes, you can collaborate with other contributors to refine and develop your ideas further. Collaboration is encouraged to foster creativity and innovation. </p>
+            </div>
+            <div class="faq-question">
+                <h3>How can I stay updated on the progress of my idea?</h3>
+                <p> You can track the progress of your idea through our platform and receive notifications on its status. You can also engage in discussions with other contributors and our team. </p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="grid-flow">
+        <%- include('partials/footer') %>
+    </footer>
+    
+
+
+</body>
+</html>
